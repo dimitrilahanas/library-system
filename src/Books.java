@@ -21,11 +21,9 @@ public class Books {
     }
 
     public void getBooks() {
-        StringBuilder result = new StringBuilder();
         for (ArrayList<String> book : bookList) {
-            result.append(book.get(0) + "," + book.get(1));
+            System.out.println(book.get(0) + "," + book.get(1));
         }
-        System.out.println(result.toString());
     }
 
     public void commandList() {
@@ -38,6 +36,7 @@ public class Books {
         for (String command : commands) {
             System.out.println(command);
         }
+        commandSelector();
     }
 
     public void commandSelector() {
@@ -62,7 +61,7 @@ public class Books {
         System.out.println("Welcome to the Library System!");
         commandList();
         
-        while (sc.nextLine() != "exit") {
+        while (sc.nextLine() != "exit" || sc.next() != "exit") {
             commandSelector();
         }
     }
