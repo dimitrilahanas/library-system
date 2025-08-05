@@ -5,7 +5,7 @@ public class Books {
     Scanner sc = new Scanner(System.in);
     private ArrayList<ArrayList<String>> bookList = new ArrayList<>();
 
-    public String addBook() {
+    public void addBook() {
         System.out.print("Book Name: ");
         String BookName = sc.next();
 
@@ -17,14 +17,53 @@ public class Books {
         bookEntry.add(Author);
         bookList.add(bookEntry);
 
-        return (BookName + " " + Author + " has been added to the library!");
+        System.out.println(BookName + " " + Author + " has been added to the library!");
     }
 
-    public String getBooks() {
+    public void getBooks() {
         StringBuilder result = new StringBuilder();
         for (ArrayList<String> book : bookList) {
-            result.append(book.get(0) + " " + book.get(1));
+            result.append(book.get(0) + "," + book.get(1));
         }
-        return result.toString();
+        System.out.println(result.toString());
+    }
+
+    public void commandList() {
+        String[] commands = {
+            "1 - getBooks",
+            "2 - addBook"
+        };
+
+        System.out.println("Supported Commands:");
+        for (String command : commands) {
+            System.out.println(command);
+        }
+    }
+
+    public void commandSelector() {
+        System.out.print("Select a command (1, 2...): ");
+        int command = sc.nextInt();
+
+        switch (command) {
+            case 1:
+                getBooks();
+                break;
+            case 2:
+                addBook();
+                break;
+            default:
+                System.out.println("Invalid Command.");
+                commandSelector();
+
+        }
+    }
+
+    public void run() {
+        System.out.println("Welcome to the Library System!");
+        commandList();
+        
+        while (sc.nextLine() != "exit") {
+            commandSelector();
+        }
     }
 }
