@@ -1,0 +1,4 @@
+
+Title: John
+Author: Doe
+Borrowed: false
