@@ -31,7 +31,7 @@ public class Book {
     public void createBook() {
 
         try {
-            FileWriter fw = new FileWriter("books.txt", true);
+            FileWriter fw = new FileWriter("database/books.txt", true);
             PrintWriter pw = new PrintWriter(fw);
             
             System.out.print("Book Name: ");

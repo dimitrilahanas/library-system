@@ -47,13 +47,15 @@ public class Bookshelf {
     commandList();
 
     while (true) {
-        System.out.println("Type 'exit' to quit.");
+        System.out.println("Type 'exit' to quit, press enter to continue.");
         String input = sc.nextLine();
         if (input.equalsIgnoreCase("exit")) {
             System.out.println("Exiting system...");
             break;
         }
-        commandSelector();
+        else {
+            commandSelector();
+        }
     }
 }
 }
