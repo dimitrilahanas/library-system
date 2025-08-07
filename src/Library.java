@@ -18,16 +18,17 @@ public class Library {
     }
 
     public void commandSelector() {
-        Book bookCommands = new Book();
+        Book book = new Book();
+        Bookshelf bookShelf = new Bookshelf();
         System.out.print("Select a command (1, 2...): ");
         int command = sc.nextInt();
 
         switch (command) {
             case 1:
-                // bookCommands.getBooks();
+                bookShelf.allBooks();
                 break;
             case 2:
-                bookCommands.createBook();
+                book.createBook();
                 break;
             default:
                 System.out.println("Invalid Command.");
