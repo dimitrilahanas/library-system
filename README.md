@@ -16,15 +16,14 @@ project-root/
 │   ├── Book.java            # Book class (create/save book)
 │   ├── Bookshelf.java       # Handles reading book list
 │   └── Library.java         # Main system controller
-├── build.bat                # Build script for Windows
-├── build.sh                 # Build script for macOS/Linux
+├── build.bat                # Build and run script for Windows
+├── build.sh                 # Build and run script for macOS/Linux
 └── .gitignore               # Optional: excludes compiled files
 ```
 
 ## 🚀 How to Run
 
-### 1. Compile the code
-You can use the provided scripts or run manually.
+### Option 1: Using Provided Scripts
 
 **On macOS/Linux:**
 ```bash
@@ -37,14 +36,18 @@ chmod +x build.sh
 build.bat
 ```
 
-### 2. Run the program
-After compiling, run the main class:
+These scripts will:
+1. Compile all Java files in `src/` into `bin/`
+2. Run the `Library` class from the compiled files
+
+### Option 2: Manual Run
+
+If you prefer to compile and run manually:
 
 ```bash
+javac -d bin src/*.java
 java -cp bin Library
 ```
-
-> Make sure you're in the project root directory and that the `bin/` folder exists.
 
 ## 📦 Features
 
