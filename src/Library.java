@@ -37,22 +37,23 @@ public class Library {
         }
     }
 
+    public void exit() {
+        System.out.println("Type 'exit' to quit, press enter to continue.");
+            String input = sc.nextLine();
+            if (input.equalsIgnoreCase("exit")) {
+                System.out.println("Exiting system...");
+                System.exit(0);
+            }
+    }
+
     public void run() {
         System.out.println("Welcome to the Library System!");
 
         while (true) {
             commandList();
             commandSelector();
-
-            System.out.println("Type 'exit' to quit, press enter to continue.");
-            String input = sc.nextLine();
-            if (input.equalsIgnoreCase("exit")) {
-                System.out.println("Exiting system...");
-                break;
-            }
+            exit();
         }
-
-        sc.close();
     }
 
     public static void main(String[] args) {

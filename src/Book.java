@@ -29,7 +29,7 @@ public class Book {
     }
 
     public void createBook() {
-
+        Library lib = new Library();
         try {
             FileWriter fw = new FileWriter("database/books.txt", true);
             PrintWriter pw = new PrintWriter(fw);
@@ -53,6 +53,8 @@ public class Book {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        lib.exit();
 
     }
 }
