@@ -35,12 +35,12 @@ public class Book {
             PrintWriter pw = new PrintWriter(fw);
             
             System.out.print("Book Name: ");
-            title = sc.next();
+            title = sc.nextLine();
             System.out.print("Author: ");
-            author = sc.next();
+            author = sc.nextLine();
             borrowed = false;
 
-            System.out.println(title + " " + author + " has been added to the library!");
+            System.out.println(title + " by " + author + " has been added to the library!");
             
             Book bookEntry = new Book(title, author, borrowed);
             
