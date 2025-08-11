@@ -4,10 +4,10 @@ A simple console-based Library System written in Java. It allows users to:
 - View all books
 - Add new books
 - Store data in a text file (`books.txt`)
+- Search for a book
 
 Features to be added:
 - Delete books
-- Search for a book
 - Mark books as borrowed
 
 ## 🗂️ Project Structure
