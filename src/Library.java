@@ -7,7 +7,8 @@ public class Library {
     public void commandList() {
         String[] commands = {
             "1 - getBooks",
-            "2 - addBook"
+            "2 - addBook",
+            "3 - searchBook"
         };
 
         System.out.println("Supported Commands:");
@@ -30,6 +31,8 @@ public class Library {
             case 2:
                 book.createBook();
                 break;
+            case 3:
+                bookShelf.searchBook();
             default:
                 System.out.println("Invalid Command.");
                 commandSelector();
